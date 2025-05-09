@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ResinArt By CentreStone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .about-section {
+            background: #fff;
+            padding: 3rem 0 2rem 0;
+        }
+        .about-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .about-img {
+            flex: 1;
+            min-width: 260px;
+            max-width: 420px;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(94,53,177,0.10);
+        }
+        .about-info {
+            flex: 2;
+            min-width: 270px;
+            max-width: 650px;
+        }
+        .about-info h1 {
+            color: #5e35b1;
+            font-size: 2.1rem;
+            margin-bottom: 0.7rem;
+        }
+        .founder-story {
+            background: #e6fff7;
+            border-left: 5px solid #5e35b1;
+            padding: 1.1rem 1.4rem;
+            border-radius: 8px;
+            margin-bottom: 1.4rem;
+            font-size: 1.09rem;
+            color: #222;
+        }
+        .about-info p {
+            font-size: 1.08rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+        .about-list {
+            margin: 1.2rem 0 1.5rem 0;
+        }
+        .about-list li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 1.01rem;
+        }
+        .about-list li::before {
+            content: "•";
+            color: #009688;
+            position: absolute;
+            left: 0;
+        }
+        .about-values {
+            background: #f2e6ff;
+            border-radius: 8px;
+            padding: 1.1rem 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-values h2 {
+            color: #5e35b1;
+            font-size: 1.08rem;
+            margin-bottom: 0.5rem;
+        }
+        .about-values ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            list-style: none;
+            padding: 0;
+        }
+        .about-values li {
+            flex: 1;
+            min-width: 140px;
+            font-size: 0.98rem;
+            color: #555;
+        }
+        .process-section {
+            background: #f7f7fa;
+            border-radius: 10px;
+            padding: 2.2rem 1.2rem;
+            margin: 2.5rem 0 1.5rem 0;
+            box-shadow: 0 1px 8px rgba(94,53,177,0.07);
+        }
+        .process-section h2 {
+            color: #009688;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+        .process-steps {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+        .process-step {
+            flex: 1;
+            min-width: 180px;
+            max-width: 270px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.1rem 1rem;
+            text-align: center;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+            margin-bottom: 1rem;
+        }
+        .process-step i {
+            font-size: 2.1rem;
+            color: #5e35b1;
+            margin-bottom: 0.5rem;
+        }
+        .process-step h3 {
+            color: #009688;
+            font-size: 1.09rem;
+            margin-bottom: 0.3rem;
+        }
+        .process-step p {
+            font-size: 0.97rem;
+            color: #444;
+        }
+        .studio-gallery {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .studio-img {
+            width: 140px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+        }
+        .quote-block {
+            background: #fffbe6;
+            border-left: 5px solid #b1832c;
+            padding: 1.1rem 1.3rem;
+            font-style: italic;
+            color: #b1832c;
+            border-radius: 8px;
+            margin: 2rem 0 1.5rem 0;
+            font-size: 1.11rem;
+        }
+        @media (max-width: 900px) {
+            .about-flex {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .about-img, .about-info {
+                max-width: 100%;
+            }
+            .process-steps { gap: 1rem; }
+            .studio-gallery { gap: 0.6rem; }
+        }
+        @media (max-width: 600px) {
+            .about-section { padding: 1.5rem 0 1rem 0; }
+            .about-info h1 { font-size: 1.3rem; }
+            .founder-story, .about-values, .process-section, .quote-block { padding: 0.8rem 0.6rem; }
+            .studio-img { width: 90px; height: 65px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ResinArt Logo">
+                <span>ℛℯ𝓈𝒾𝓃𝒜𝓇𝓉 & 𝒞𝒶𝓃𝒹𝓁ℯ𝓈</span>
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="container about-flex">
+                <div class="about-img">
+                    <img src="Mem3.jpg" alt="Our Resin Art Studio">
+                </div>
+                <div class="about-info">
+                    <h1>About ResinArt By CentreStone</h1>
+                    <div class="founder-story">
+                        <strong>Meet the Founder:</strong> ResinArt By CentreStone is the dream project of <strong>Laxmi Gaur</strong>, a passionate housewife and self-taught resin artist. What began as a creative escape soon blossomed into a thriving home-based startup, where every piece is poured with love, patience, and the joy of creation. Laxmi’s journey is a celebration of turning passion into purpose, and every order supports her dream and ability.
+                    </div>
+                    <p>
+                        We are a small, family-run studio dedicated to making art accessible and meaningful. Each creation is handcrafted in our cozy home workshop, where inspiration comes from nature, memories, and the vibrant stories of our customers.
+                    </p>
+                    <p>
+                        Our mission is simple: to bring a touch of beauty, joy, and personal connection into your life through unique resin art. Whether it’s a gift for a loved one or a treat for yourself, we promise each piece is made with care, quality, and a dash of magic.
+                    </p>
+                    <ul class="about-list">
+                        <li>Custom-made resin art for décor, keepsakes, and gifting</li>
+                        <li>Eco-friendly materials and safe, non-toxic processes</li>
+                        <li>Personalized orders and bulk gifting for all occasions</li>
+                        <li>Pan-India shipping, right from our home to yours</li>
+                    </ul>
+                    <div class="about-values">
+                        <h2>Our Values</h2>
+                        <ul>
+                            <li><i class="fas fa-heart" style="color:#e57373;"></i> Passion for Craft</li>
+                            <li><i class="fas fa-leaf" style="color:#388e3c;"></i> Sustainability</li>
+                            <li><i class="fas fa-hand-holding-heart" style="color:#5e35b1;"></i> Personal Touch</li>
+                            <li><i class="fas fa-award" style="color:#b1832c;"></i> Quality Promise</li>
+                        </ul>
+                    </div>
+                    <a href="collection.html" class="btn btn-primary">Browse Our Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Behind the Scenes: Our Process -->
+        <section class="process-section">
+            <h2><i class="fas fa-eye"></i> Behind the Scenes: Our Process</h2>
+            <p style="text-align:center;max-width:700px;margin:0 auto 1.5rem auto;font-size:1.08rem;color:#444;">
+                Peek into our cozy home studio and see how each piece is lovingly designed, poured, and finished. From your first idea to the final polish, every step is a blend of artistry, patience, and joy.
+            </p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Step 1: Inspiration & Design</h3>
+                    <p>We begin with your story-favorite colors, cherished memories, or a special occasion. Laxmi sketches ideas and selects materials that reflect your vision.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fas fa-flask"></i>
+                    <h3>Step 2: Mixing & Pouring</h3>
+                    <p>Premium, eco-friendly resin is carefully measured, mixed, and tinted. Each layer is hand-poured, sometimes embedding flowers, charms, or keepsakes for a personal touch.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fas fa-sun"></i>
+                    <h3>Step 3: Curing & Detailing</h3>
+                    <p>The art is left to cure naturally, then gently demolded. Edges are sanded, surfaces polished, and details hand-finished for a flawless result.</p>
+                </div>
+                <div class="process-step">
+                    <i class="fas fa-gift"></i>
+                    <h3>Step 4: Finishing & Packaging</h3>
+                    <p>Every piece is inspected, signed, and beautifully packaged-ready to brighten your space or delight someone special.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <div class="container">
+            <div class="quote-block">
+                <i class="fas fa-quote-left"></i>
+                &nbsp;“Art is not just what we make, but the love and story we pour into it. Thank you for supporting a dream and a small business!”
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="ResinArt Logo">
+                <span>ResinArt By CentreStone</span>
+            </div>
+            <div class="footer-links">
+                <a href="tel:7080565287" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:thecentrestonebylaxmi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+
+                <a href="https://www.instagram.com/resinart_by_the_centrestone/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/7080565287" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-nav">
+                <a href="about.html">About</a>
+                <a href="collection.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>© 2024 ResinArt By CentreStone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

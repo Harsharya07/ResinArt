@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ResinArt By CentreStone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .contact-section {
+            background: #fff;
+            padding: 3rem 0 2rem 0;
+        }
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .contact-info {
+            flex: 2;
+            min-width: 270px;
+            max-width: 540px;
+        }
+        .contact-info h1 {
+            color: #5e35b1;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-highlight {
+            background: #e6fff7;
+            border-left: 5px solid #5e35b1;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.07rem;
+            color: #222;
+            border-radius: 7px;
+        }
+        .social-proof-bar {
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 2rem 0 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        .social-proof-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: #009688;
+            background: #f2e6ff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .contact-info .welcome {
+            font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 1.2rem;
+        }
+        .contact-methods {
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.09rem;
+            color: #222;
+            padding: 0.8rem 1.1rem;
+            border-radius: 7px;
+            background: #f6f3fd;
+            box-shadow: 0 1px 6px rgba(94,53,177,0.05);
+            transition: background 0.18s;
+            font-weight: 500;
+            width: fit-content;
+            text-decoration: none;
+        }
+        .contact-link:hover {
+            background: #e9e3fa;
+            color: #5e35b1;
+        }
+        .contact-link i {
+            font-size: 1.4em;
+            color: #009688;
+        }
+        .contact-details {
+            margin: 1.5rem 0 0.7rem 0;
+        }
+        .contact-details h2 {
+            font-size: 1.1rem;
+            color: #5e35b1;
+            margin-bottom: 0.3rem;
+        }
+        .contact-details p {
+            font-size: 0.98rem;
+            color: #555;
+        }
+        .contact-cta {
+            margin: 1.2rem 0 0 0;
+            font-size: 1.04rem;
+            color: #222;
+            background: #e6fff7;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+        }
+        .contact-downloads {
+            margin: 2rem 0 1.5rem 0;
+            background: #f7f7fa;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+        }
+        .contact-downloads h2 {
+            font-size: 1.08rem;
+            color: #5e35b1;
+            margin-bottom: 0.7rem;
+        }
+        .downloads-list {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .download-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #e6fff7;
+            color: #009688;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.18s;
+        }
+        .download-link:hover {
+            background: #d0f5e6;
+            color: #222;
+        }
+        .faq-block {
+            margin: 2.5rem 0 0 0;
+            background: #e6fff7;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+        }
+        .faq-block h2 {
+            font-size: 1.08rem;
+            color: #009688;
+            margin-bottom: 0.7rem;
+        }
+        .faq-list {
+            list-style: none;
+            padding: 0;
+        }
+        .faq-list li {
+            margin-bottom: 0.7rem;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #333;
+        }
+        .faq-a {
+            color: #555;
+            font-size: 0.96rem;
+        }
+        .team-block {
+            margin: 2.5rem 0 0 0;
+            background: #f7f7fa;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+        }
+        .team-block h2 {
+            font-size: 1.08rem;
+            color: #5e35b1;
+            margin-bottom: 0.7rem;
+        }
+        .team-members {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .team-member img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e6fff7;
+        }
+        .team-member .name {
+            font-weight: 600;
+            font-size: 0.97rem;
+        }
+        .team-member .role {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .review-block {
+            margin: 2.5rem 0 0 0;
+            background: #fffbe6;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+        }
+        .review-block h2 {
+            font-size: 1.08rem;
+            color: #b1832c;
+            margin-bottom: 0.7rem;
+        }
+        .review-list {
+            list-style: none;
+            padding: 0;
+        }
+        .review-list li {
+            margin-bottom: 1.1rem;
+        }
+        .review-quote {
+            font-style: italic;
+            color: #444;
+        }
+        .review-author {
+            font-size: 0.93rem;
+            color: #b1832c;
+            margin-top: 0.2rem;
+            font-weight: 500;
+        }
+        .live-support {
+            margin: 2rem 0 0 0;
+            background: #fffbe6;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .live-support i {
+            font-size: 2rem;
+            color: #ffb700;
+        }
+        .live-support-text {
+            font-size: 1.01rem;
+            color: #b1832c;
+        }
+        .contact-locations {
+            margin: 2rem 0 0 0;
+            background: #f2e6ff;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+        }
+        .contact-locations h2 {
+            font-size: 1.08rem;
+            color: #5e35b1;
+            margin-bottom: 0.7rem;
+        }
+        .location-list {
+            list-style: none;
+            padding: 0;
+        }
+        .location-list li {
+            margin-bottom: 0.5rem;
+            color: #444;
+            font-size: 0.97rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .location-list i {
+            color: #009688;
+        }
+        .contact-newsletter {
+            margin: 2.5rem 0 0 0;
+            background: #e6fff7;
+            border-radius: 8px;
+            padding: 1.2rem 1rem;
+            text-align: center;
+        }
+        .contact-newsletter h2 {
+            color: #5e35b1;
+            font-size: 1.08rem;
+            margin-bottom: 0.4rem;
+        }
+        .newsletter-form {
+            margin-top: 0.7rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .newsletter-form input[type="email"] {
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #bbb;
+            font-size: 1rem;
+            width: 220px;
+        }
+        .newsletter-form button {
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            background: #5e35b1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.18s;
+        }
+        .newsletter-form button:hover {
+            background: #009688;
+        }
+        .contact-map {
+            flex: 1;
+            min-width: 220px;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .map-placeholder {
+            background: #f2e6ff;
+            border-radius: 12px;
+            padding: 2.2rem 1.2rem;
+            text-align: center;
+            color: #5e35b1;
+            box-shadow: 0 2px 14px rgba(94,53,177,0.08);
+            margin-bottom: 1.2rem;
+        }
+        .map-placeholder i {
+            font-size: 2.3rem;
+            margin-bottom: 0.6rem;
+            color: #009688;
+        }
+        @media (max-width: 900px) {
+            .contact-flex {
+                flex-direction: column;
+                gap: 2.2rem;
+            }
+            .contact-info, .contact-map {
+                max-width: 100%;
+            }
+            .team-members { gap: 1rem; }
+            .social-proof-bar { gap: 1rem; }
+            .downloads-list { gap: 0.7rem; }
+        }
+        @media (max-width: 600px) {
+            .contact-section { padding: 1.5rem 0 1rem 0; }
+            .contact-info h1 { font-size: 1.4rem; }
+            .contact-link { font-size: 0.97rem; padding: 0.7rem 0.7rem; }
+            .contact-cta, .faq-block, .review-block, .team-block, .contact-downloads, .live-support, .contact-locations, .contact-newsletter { padding: 0.8rem 0.6rem; }
+            .map-placeholder { padding: 1.2rem 0.5rem; }
+            .social-proof-bar { flex-direction: column; align-items: flex-start; }
+            .downloads-list { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="ResinArt Logo">
+                <span>ℛℯ𝓈𝒾𝓃𝒜𝓇𝓉 & 𝒞𝒶𝓃𝒹𝓁ℯ𝓈</span>
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="container contact-flex">
+                <div class="contact-info">
+
+                    <div class="contact-highlight">
+                        <strong>We're here to help!</strong> Whether you want to order, collaborate, or just say hello, our team is ready to assist you. Expect a reply within 1 business day.
+                    </div>
+
+                    <div class="social-proof-bar">
+                        <div class="social-proof-item"><i class="fas fa-star"></i> 4.5/5 (50+ reviews)</div>
+                        <div class="social-proof-item"><i class="fas fa-users"></i> Check Our Instagram profile to see Happy Clients</div>
+                        <div class="social-proof-item"><i class="fas fa-award"></i>Currently Home based ResinArt Startup</div>
+                        <div class="social-proof-item"><i class="fas fa-shipping-fast"></i>Free delivery on orders above ₹1499</div>
+                        
+                    </div>
+
+                    <h1>Contact Us</h1>
+                    <div class="welcome">
+                        <p>Our customers mean the world to us! Whether you want to place an order, request a custom piece, or just say hello, we're always happy to connect. Choose your preferred way to reach us below.</p>
+                    </div>
+                    <ul class="contact-methods">
+                        <li>
+                            <a href="tel:7080565287" class="contact-link" aria-label="Call us">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>Call: +91 7080565287</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:thecentrestonebylaxmi@gmail.com" class="contact-link" aria-label="Email"><i class="fas fa-envelope"></i>
+                            <span>Mail : thecentrestonebylaxmi@gmail.com</span></a>
+
+                        </li>
+                        <li>
+                            <a href="https://wa.me/917080565287" class="contact-link" target="_blank" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp Chat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/resinart_by_the_centrestone/" class="contact-link" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>@ResinArtByCentreStone</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="contact-details">
+                        <h2>Working Hours</h2>
+                        <p>Monday – Saturday: 10:00 AM – 7:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                    <div class="contact-cta">
+                        <p><strong>Quickest way to reach us:</strong> DM on Instagram or WhatsApp for instant replies! For calls, please contact during working hours.</p>
+                    </div>
+
+                    <div class="contact-downloads">
+                        <h2>Download Our Catalog & Policies</h2>
+                        <div class="downloads-list">
+                            <!-- <a href="catalog.pdf" class="download-link" download>
+                                <i class="fas fa-file-download"></i> Product Catalog
+                            </a> -->
+                            <a href="care-guide.pdf" class="download-link" download>
+                                <i class="fas fa-book"></i> Resin Care Guide
+                            </a>
+                            <a href="shipping-policy.pdf" class="download-link" download>
+                                <i class="fas fa-shipping-fast"></i> Shipping Policy
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="faq-block">
+                        <h2>Frequently Asked Questions</h2>
+                        <ul class="faq-list">
+                            <li>
+                                <span class="faq-q">How can I place an order?</span><br>
+                                <span class="faq-a">Simply message us on Instagram or WhatsApp with your requirements. We'll guide you through the process!</span>
+                            </li>
+                            <li>
+                                <span class="faq-q">Do you accept custom requests?</span><br>
+                                <span class="faq-a">Absolutely! Custom orders are our specialty. Share your idea and we'll make it real.</span>
+                            </li>
+                            <li>
+                                <span class="faq-q">Where are you based?</span><br>
+                                <span class="faq-a">We are based in India and deliver pan-India. All orders are handled online.</span>
+                            </li>
+                            <li>
+                                <span class="faq-q">How soon will I get a reply?</span><br>
+                                <span class="faq-a">We reply to all messages within 24 hours during business days.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="team-block">
+                        <h2>Meet Our Team</h2>
+                        <div class="team-members">
+                            <div class="team-member">
+                                <img src="Mem1.png" alt="Laxmi Gaur">
+                                <a href="https://www.instagram.com/laxmigaur2022/" target="_blank" class="contact-link" style="background:#fffbe6;color:#b1832c;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div>
+                                    <div class="name">Laxmi Gaur</div>
+                                    <div class="role">Founder & Artist</div>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <img src="Mem2.jpg" alt="Harsh">
+                                <a href="https://www.instagram.com/harsshh_0710/" target="_blank" class="contact-link" style="background:#fffbe6;color:#b1832c;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div>
+                                    <div class="name">Harsh</div>
+                                    <div class="role">SDE & Tech Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-block">
+                        <h2>What Our Customers Say</h2>
+                        <ul class="review-list">
+                            <li>
+                                <div class="review-quote">"Absolutely loved my custom resin piece! The team was so responsive and helpful."</div>
+                                <div class="review-author">– Priya S.</div>
+                            </li>
+                            <li>
+                                <div class="review-quote">"Quick replies on WhatsApp and beautiful craftsmanship. Highly recommend!"</div>
+                                <div class="review-author">– Aman K.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="live-support">
+                        <i class="fas fa-headset"></i>
+                        <div class="live-support-text">
+                            <strong>Need instant help?</strong> Chat with us live on WhatsApp or Instagram DM for real-time support!
+                        </div>
+                    </div>
+
+                    <div class="contact-locations">
+                        <h2>Our Locations</h2>
+                        <ul class="location-list">
+                            <li><i class="fas fa-map-marker-alt"></i> India (Online orders only)</li>
+                            <li><i class="fas fa-globe"></i> Serving customers pan-India</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-newsletter">
+                        
+                        <a href="https://www.instagram.com/resinart_by_the_centrestone/" target="_blank" class="contact-link" style="background:#fffbe6;color:#b1832c;">
+                            <i class="fab fa-instagram"></i> <h2>Stay Updated!</h2>
+                        </a>
+                        <!-- <div>Subscribe for new launches, offers & behind-the-scenes stories.</div>
+                        <form class="newsletter-form" action="#" method="POST" autocomplete="off" onsubmit="alert('Thank you for subscribing!');return false;">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <button type="submit">Subscribe</button>
+                        </form> -->
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Based in India<br>
+                        <span style="color:#009688;">Online orders only</span></p>
+                    </div>
+                    <div style="margin-top:1.2rem;">
+                        <a href="https://www.instagram.com/resinart_by_the_centrestone/" target="_blank" class="contact-link" style="background:#fffbe6;color:#b1832c;">
+                            <i class="fab fa-instagram"></i> See Our Latest Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-flex">
+            <div class="footer-logo">
+                <img src="logo.png" alt="ResinArt Logo">
+                <span>ResinArt By CentreStone</span>
+            </div>
+            <div class="footer-links">
+                <a href="tel:7080565287" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:thecentrestonebylaxmi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+
+                <a href="https://www.instagram.com/resinart_by_the_centrestone/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/917080565287" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-nav">
+                <a href="about.html">About</a>
+                <a href="collection.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>© 2024 ResinArt By CentreStone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
